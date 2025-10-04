@@ -70,11 +70,9 @@ public class MyController {
                 throw new UnsupportedCodeException("UID 123 не поддерживается");
             }
 
-            // Модификация source
             log.info("Начало модификации поля source");
             modifySourceRequestService.modify(request);
 
-            // Модификация systemName и отправка в Сервис 2
             log.info("Начало модификации systemName и отправки в Сервис 2");
             modifySystemNameRequestService.modify(request);
 
