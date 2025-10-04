@@ -44,7 +44,7 @@ public class MyController {
 
             long timeDifference = service2ReceivedTime - requestOriginalTime;
 
-            log.info("ИЗМЕРЕНИЕ ВРЕМЕНИ");
+            log.info("SИЗМЕРЕНИЕ ВРЕМЕНИ");
             log.info("Время создания запроса (из systemTime): {}", requestOriginalTime);
             log.info("Время получения в Сервисе 2: {}", service2ReceivedTime);
             log.info("Общее время от создания до получения в Сервисе 2: {} мс", timeDifference);
