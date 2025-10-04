@@ -39,18 +39,16 @@ public class MyController {
         log.info("Request в Сервисе 2: {}", request);
 
         try {
-            // Парсим время из systemTime запроса
             Date requestTime = dateFormat.parse(request.getSystemTime());
             long requestOriginalTime = requestTime.getTime();
 
-            // Вычисляем разницу во времени
             long timeDifference = service2ReceivedTime - requestOriginalTime;
 
-            log.info("=== ИЗМЕРЕНИЕ ВРЕМЕНИ ===");
+            log.info("ИЗМЕРЕНИЕ ВРЕМЕНИ");
             log.info("Время создания запроса (из systemTime): {}", requestOriginalTime);
             log.info("Время получения в Сервисе 2: {}", service2ReceivedTime);
             log.info("Общее время от создания до получения в Сервисе 2: {} мс", timeDifference);
-            log.info("=== КОНЕЦ ИЗМЕРЕНИЯ ===");
+            log.info("КОНЕЦ ИЗМЕРЕНИЯ");
 
         } catch (Exception e) {
             log.error("Ошибка при парсинге времени: {}", e.getMessage());
